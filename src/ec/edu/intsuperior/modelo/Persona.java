@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 package ec.edu.intsuperior.modelo;
-
 import java.util.Date;
-public class Personal {
+/**
+ *
+ * @author quish
+ */
+public class Persona {
     private String nombre1;
     private String nombre2;
     private String ci;
@@ -16,11 +19,12 @@ public class Personal {
     private String celular;
     private String correo;
     private Date fechaNacimiento;
+    private String edad;
 
-    public Personal() {
+    public Persona() {
     }
 
-    public Personal(String nombre1, String nombre2, String ci, String apellido1, String apellido2, String direccion, String celular, String correo, Date fechaNacimiento) {
+    public Persona(String nombre1, String nombre2, String ci, String apellido1, String apellido2, String direccion, String celular, String correo, Date fechaNacimiento, String edad) {
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
         this.ci = ci;
@@ -30,6 +34,7 @@ public class Personal {
         this.celular = celular;
         this.correo = correo;
         this.fechaNacimiento = fechaNacimiento;
+        this.edad = edad;
     }
 
     public void setApellido1(String apellido1) {
@@ -66,6 +71,10 @@ public class Personal {
 
     public void setNombre2(String nombre2) {
         this.nombre2 = nombre2;
+    }
+    
+    public void setEdad (String edad){
+        this.edad = edad;
     }
 
     public String getNombre1() {
@@ -104,9 +113,7 @@ public class Personal {
         return fechaNacimiento;
     }
     
-    public int calcularEdad(){
-        int edad=23;
-       
+    public String getEdad(){
         return edad;
     }
 
@@ -119,10 +126,7 @@ public class Personal {
                 + "Direccion: "+getDireccion()+"\n"
                 + "Celular: "+getCelular()+"\n"
                 + "Correo: "+getCorreo()+"\n"
-                + "Edad: "+calcularEdad();
+                + "Edad: "+getEdad()+"\n";
                 
                 }
-    
-    
-    
 }
