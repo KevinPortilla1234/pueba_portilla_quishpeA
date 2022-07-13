@@ -116,6 +116,8 @@ public class Persona {
     public String getEdad(){
         return edad;
     }
+    
+    
 
     @Override
     public String toString() {
